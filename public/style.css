@@ -1,0 +1,216 @@
+/* RETROFEST '26 — Standalone CSS */
+:root {
+  --color-cream: #F3E4C8;
+  --color-burnt-orange: #D8753E;
+  --color-mustard: #E7B84B;
+  --color-olive: #6D7851;
+  --color-dark-brown: #713D29;
+  --color-paper: #FAF0DF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark-brown);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, .logo {
+  font-family: 'Shrikhand', cursive, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(243, 228, 200, 0.96);
+  border-bottom: 4px solid var(--color-dark-brown);
+  padding: 12px 24px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  color: var(--color-dark-brown);
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: var(--color-dark-brown);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: var(--color-burnt-orange);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid var(--color-dark-brown);
+  box-shadow: 3px 3px 0 var(--color-dark-brown);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--color-dark-brown);
+}
+
+.btn-primary, .btn-orange {
+  background-color: var(--color-burnt-orange);
+  color: var(--color-cream);
+}
+
+.btn-olive {
+  background-color: var(--color-olive);
+  color: var(--color-paper);
+}
+
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 4px solid var(--color-dark-brown);
+  background: radial-gradient(circle at center, #FAF0DF 0%, #F3E4C8 100%);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--color-dark-brown);
+  margin-bottom: 12px;
+}
+
+.hero-tagline {
+  display: inline-block;
+  background: var(--color-mustard);
+  color: var(--color-dark-brown);
+  font-weight: 800;
+  padding: 6px 18px;
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 0 var(--color-dark-brown);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border: 2px solid var(--color-dark-brown);
+  background: var(--color-paper);
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--color-burnt-orange);
+  color: #fff;
+  box-shadow: 2px 2px 0 var(--color-dark-brown);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.event-card {
+  background: var(--color-paper);
+  border: 3px solid var(--color-dark-brown);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 4px 4px 0 var(--color-dark-brown);
+}
+
+.retro-form {
+  background: var(--color-paper);
+  border: 3px solid var(--color-dark-brown);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 6px 6px 0 var(--color-dark-brown);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: 'Space Mono', monospace;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 8px;
+  background: var(--color-cream);
+  font-size: 14px;
+}
+
+.error-msg {
+  color: #c02b2b;
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+}
+
+.ticket-card {
+  background: #fff;
+  border: 4px solid var(--color-dark-brown);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 650px;
+  margin: 20px auto;
+  box-shadow: 6px 6px 0 var(--color-dark-brown);
+}
+
+.hidden { display: none; }
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--color-dark-brown);
+  color: var(--color-cream);
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+}

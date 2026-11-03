@@ -1,0 +1,6 @@
+{
+  "name": "RETROFEST '26 — 1970s Vintage Retro Festival",
+  "description": "A nostalgic 1970s vintage retro college festival website prototype celebrating technology, culture, music, and innovation with groovy aesthetics, dynamic event filters, interactive schedule timetable, and registration ticket generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

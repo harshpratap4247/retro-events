@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #F3E4C8;
+    --color-burnt-orange: #D8753E;
+    --color-mustard: #E7B84B;
+    --color-olive: #6D7851;
+    --color-dark-brown: #713D29;
+    --color-warm-paper: #FAF0DF;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-dark-brown);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, .font-groovy {
+    font-family: 'Shrikhand', cursive, sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-retro-slab {
+    font-family: 'Alfa Slab One', cursive, serif;
+  }
+
+  .font-retro-mono {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* 1970s Vintage Graphic & Pattern Helpers */
+.retro-sunburst {
+  background: repeating-conic-gradient(
+    from 0deg,
+    #D8753E 0deg 15deg,
+    #E7B84B 15deg 30deg,
+    #F3E4C8 30deg 45deg,
+    #6D7851 45deg 60deg
+  );
+}
+
+.retro-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #D8753E 0,
+    #D8753E 18px,
+    #E7B84B 18px,
+    #E7B84B 36px,
+    #F3E4C8 36px,
+    #F3E4C8 54px,
+    #6D7851 54px,
+    #6D7851 72px
+  );
+}
+
+/* Subtle vintage litho paper grain */
+.paper-grain {
+  background-image: radial-gradient(rgba(113, 61, 41, 0.05) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Authentic 70s warm drop shadow */
+.shadow-retro {
+  box-shadow: 4px 4px 0px 0px #713D29;
+}
+
+.shadow-retro-lg {
+  box-shadow: 8px 8px 0px 0px #713D29;
+}
+
+.shadow-retro-sm {
+  box-shadow: 2px 2px 0px 0px #713D29;
+}
+
+.shadow-retro-orange {
+  box-shadow: 6px 6px 0px 0px #D8753E;
+}
+
+/* Groovy button press animation */
+.btn-retro {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-retro:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #713D29;
+}
+.btn-retro:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #713D29;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* Page Transitions (respects prefers-reduced-motion) */
+.page-transition {
+  animation: pageSlideIn 0.22s ease-out;
+}
+
+@keyframes pageSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition,
+  .animate-spin-slow,
+  .animate-spin-slower,
+  .btn-retro {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
